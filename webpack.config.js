@@ -1,8 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var path = require('path');
+var webpack = require('webpack');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const config = {
+var config = {
   entry: {
     app: './src/app.js'
   },
