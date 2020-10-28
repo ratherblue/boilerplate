@@ -2,6 +2,24 @@ language: node_js
 
 node_js:
   - node
+dist: trusty
+sudo: required
+
+before_script:
+  - npm install
+
+script:
+  - npm run build
+  - bin/fmpp
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: docs
+  on:
+    branch: main
 
 notifications:
-  email: false
+  on_success: false
+  on_failure: change

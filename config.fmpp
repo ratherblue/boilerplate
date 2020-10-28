@@ -1,0 +1,21 @@
+# encoding: UTF-8
+sourceEncoding: UTF-8
+outputEncoding: UTF-8
+urlEscapingCharset: UTF-8
+sourceRoot: src
+outputRoot: docs
+logFile: log.fmpp
+datetimeFormat: "MMMM d, yyyy h:mm a zzz"
+caseSensitive
+borders: [
+  header("<#import '/templates/common.ftl' as c />", **/*.html, /portfolio/*.ftl)
+  header("<#import '/templates/common.ftl' as c />", sitemap.xml)
+]
+modes: [
+  ignore(/templates/, /less/, *.js, /img/.DS_Store)
+  copy(/pdf/, /img/, /icon-font/, robots.txt)
+]
+data: {
+  domain: example.com
+  googleUA: UA-90314119-1
+}
