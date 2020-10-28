@@ -19,3 +19,4 @@ data: {
   domain: example.com
   googleUA: UA-90314119-1
 }
+turns: [turn(1, *.html), turn(2, sitemap.xml)]
