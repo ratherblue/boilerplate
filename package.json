@@ -1,0 +1,32 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "description": "project boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ratherblue/boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ratherblue/boilerplate/issues"
+  },
+  "homepage": "https://github.com/ratherblue/boilerplate#readme",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "css-loader": "^5.0.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "mini-css-extract-plugin": "^1.2.1",
+    "postcss": "^8.1.4",
+    "postcss-loader": "^4.0.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  }
+}
