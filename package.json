@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "lint": "stylelint -s less src/less/**/*.less",
-    "test": "lint"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
