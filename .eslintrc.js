@@ -10,5 +10,5 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12
   },
-  ignorePatterns: ['dist/bundle.js']
+  ignorePatterns: ['dist/**/*.js']
 }
