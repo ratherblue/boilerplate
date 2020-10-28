@@ -1,1 +1,1 @@
-require('./less/base.less')
+require('./less/styles.less')
