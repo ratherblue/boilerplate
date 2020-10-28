@@ -1,6 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
   entry: {
@@ -29,6 +28,6 @@ const config = {
       filename: './css/[name].css'
     })
   ]
-};
+}
 
-module.exports = config;
+module.exports = config
