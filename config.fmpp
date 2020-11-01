@@ -16,7 +16,7 @@ modes: [
   copy(/pdf/, /img/, robots.txt, /assets/*.css)
 ]
 data: {
-  manifest: json(/assets/manifest.json)
+  manifest: json(assets/manifest.json)
   site: json(../site.json)
 }
 turns: [turn(1, *.html), turn(2, sitemap.xml)]
