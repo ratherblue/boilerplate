@@ -48,7 +48,7 @@
       <title>Title</title>
       <@defaultMetaTags />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="${c.manifest['app.css']?keep_after('auto./')}">
+      <link rel="stylesheet" type="text/css" href="${c.manifest['app.css']}">
       <link rel="shortcut icon" href="img/c-logo.png" type="image/x-icon">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">

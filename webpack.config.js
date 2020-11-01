@@ -26,7 +26,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './styles.[contenthash].css'
+      filename: 'styles.[contenthash].css'
     }),
     new ManifestPlugin()
   ]
