@@ -84,9 +84,7 @@ typings/
 dist
 docs
 build
-src/*.css
-src/manifest.json
-src/*.js
+src/assets/
 
 # Gatsby files
 .cache/

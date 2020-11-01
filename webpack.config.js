@@ -4,29 +4,28 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
   entry: {
-    app: './src/app.js'
+    styles: './src/styles.js',
+    bootstrap: './src/bootstrap.js'
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'src')
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'src', 'assets')
   },
   module: {
     rules: [
       {
-        test: /\.(less)$/,
-        use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'less-loader'
-        ]
+        test: /\.(scss)$/,
+        use: ['style-loader',
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'postcss-loader',
+        'sass-loader']
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.[contenthash].css'
+      filename: '[name].[contenthash].css'
     }),
     new ManifestPlugin()
   ]

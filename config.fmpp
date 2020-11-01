@@ -12,11 +12,11 @@ borders: [
   header("<#import '/templates/common.ftl' as c />", sitemap.xml)
 ]
 modes: [
-  ignore(/templates/, /less/, *.js, /img/.DS_Store, manifest.json)
-  copy(/pdf/, /img/, /icon-font/, robots.txt)
+  ignore(/templates/, /scss/, *.js, /img/.DS_Store, manifest.json, /assets/*.js, /assets/*.json)
+  copy(/pdf/, /img/, robots.txt, /assets/*.css)
 ]
 data: {
-  manifest: json(manifest.json)
+  manifest: json(/assets/manifest.json)
   site: json(../site.json)
 }
 turns: [turn(1, *.html), turn(2, sitemap.xml)]

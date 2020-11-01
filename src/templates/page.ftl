@@ -49,7 +49,11 @@
       <@defaultMetaTags />
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="${c.manifest['app.css']}">
+      <#list c.manifest?keys as key>
+        <#if key?ends_with(".css")>
+          <link rel="stylesheet" type="text/css" href="assets/${c.manifest[key]}">
+        </#if>
+      </#list>
       <link rel="shortcut icon" href="img/c-logo.png" type="image/x-icon">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
