@@ -36,3 +36,11 @@
     <span class="sub-title">Coming Soon</span><#t />
   </h1><#t />
 </#macro>
+
+<#macro socialMediaLinks>
+  <ul>
+    <#list site.socialMedia as link>
+      <li><a href="${link.url}" rel="nofollow"><i class="fa fa-${link.icon}"></i></a></li>
+    </#list>
+  </ul>
+</#macro>

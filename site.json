@@ -1,0 +1,39 @@
+{
+  "name": "Boilerplate",
+  "copyright": "Boilerplate Inc.",
+  "timezone": "America/Los_Angeles",
+  "titleSuffix": " — Boilerplate",
+  "domain": "example.com",
+  "https": true,
+  "googleUA": "",
+  "socialMedia": [
+    {
+      "icon": "facebook",
+      "url": "https://www.facebook.com/public/Example-Profile"
+    },
+    {
+      "icon": "twitter",
+      "url": "https://twitter.com/example"
+    },
+    {
+      "icon": "instagram",
+      "url": "https://www.instagram.com/instagram"
+    },
+    {
+      "icon": "youtube",
+      "url": "https://www.youtube.com/user/youtube"
+    },
+    {
+      "icon": "yelp",
+      "url": "https://www.yelp.com/biz/example"
+    },
+    {
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/company/linkedin"
+    },
+    {
+      "icon": "pinterest",
+      "url": "https://www.pinterest.com/pinterest"
+    }
+  ]
+}

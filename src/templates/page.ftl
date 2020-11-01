@@ -17,7 +17,7 @@
 <#---
   Shared vars
 -->
-<#assign titleSuffix = " — title suffix" />
+<#assign titleSuffix = site.titleSuffix />
 
 <#---
   Default preamble to the page
@@ -45,14 +45,15 @@
     <html lang="${c.lang}">
     <head prefix="og: http://ogp.me/ns#">
       <@charset />
-      <title>Title</title>
+      <title>${title + titleSuffix}</title>
       <@defaultMetaTags />
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="${c.manifest['app.css']}">
       <link rel="shortcut icon" href="img/c-logo.png" type="image/x-icon">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
-      <meta itemprop="dateModified" content="${pp.now?iso("America/Los_Angeles")}">
+      <meta itemprop="dateModified" content="${pp.now?iso(site.timezone)}">
       <@header.header />
       <main class="page-main" role="main">
         </#compress><#nested /><#compress>
@@ -60,6 +61,7 @@
       <#-- footer -->
       <@footer.wrapper>
         <@footer.copyright />
+        <@ui.socialMediaLinks />
       </@footer.wrapper>
 
       <#-- analytics -->
@@ -100,7 +102,7 @@
 -->
 <#macro defaultMetaTags>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
 </#macro>
 

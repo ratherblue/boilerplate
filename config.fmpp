@@ -16,8 +16,7 @@ modes: [
   copy(/pdf/, /img/, /icon-font/, robots.txt)
 ]
 data: {
-  domain: example.com
-  googleUA: UA-90314119-1
   manifest: json(manifest.json)
+  site: json(../site.json)
 }
 turns: [turn(1, *.html), turn(2, sitemap.xml)]

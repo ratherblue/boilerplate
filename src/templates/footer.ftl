@@ -16,7 +16,7 @@
 <#macro copyright>
   <#compress>
     <p class="copyright"><#t />
-      © ${pp.now?string('YYYY')} Copyright<#t />
+      © ${pp.now?string('YYYY')} Copyright ${site.copyright}<#t />
     </p>
   </#compress>
 </#macro>

@@ -24,8 +24,9 @@
 <#assign fullDate = "EEEE, MMMM d, yyyy, h:mm a zzz" />
 
 <#assign context = pp.home /><#-- App context -->
-<#assign domain = domain /><#-- from config.fmpp -->
-<#assign fullDomain = "http://" + domain /><#-- domain + protocol -->
+<#assign site = site /><#-- from config.fmpp/site.json -->
+<#assign domain = site.domain /><#-- from config.fmpp -->
+<#assign fullDomain = site.https?string("https://","http://") + site.domain /><#-- domain + protocol -->
 
-<#assign googleUA = googleUA /><#-- from config.fmpp -->
+<#assign googleUA = site.googleUA /><#-- from config.fmpp -->
 <#assign manifest = manifest /><#-- from config.fmpp -->
