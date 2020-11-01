@@ -18,6 +18,6 @@ modes: [
 data: {
   domain: example.com
   googleUA: UA-90314119-1
-  manifest: json(../build/manifest.json)
+  manifest: json(manifest.json)
 }
 turns: [turn(1, *.html), turn(2, sitemap.xml)]
