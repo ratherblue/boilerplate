@@ -12,11 +12,12 @@ borders: [
   header("<#import '/templates/common.ftl' as c />", sitemap.xml)
 ]
 modes: [
-  ignore(/templates/, /less/, *.js, /img/.DS_Store)
+  ignore(/templates/, /less/, *.js, /img/.DS_Store, manifest.json)
   copy(/pdf/, /img/, /icon-font/, robots.txt)
 ]
 data: {
   domain: example.com
   googleUA: UA-90314119-1
+  manifest: json(../build/manifest.json)
 }
 turns: [turn(1, *.html), turn(2, sitemap.xml)]

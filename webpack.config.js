@@ -1,4 +1,5 @@
 const path = require('path')
+const ManifestPlugin = require('webpack-manifest-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
@@ -7,7 +8,7 @@ const config = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'docs')
+    path: path.resolve(__dirname, 'build')
   },
   module: {
     rules: [
@@ -25,8 +26,9 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './styles.css'
-    })
+      filename: './styles.[contenthash].css'
+    }),
+    new ManifestPlugin()
   ]
 }
 

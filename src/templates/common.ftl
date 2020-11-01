@@ -28,3 +28,4 @@
 <#assign fullDomain = "http://" + domain /><#-- domain + protocol -->
 
 <#assign googleUA = googleUA /><#-- from config.fmpp -->
+<#assign manifest = manifest /><#-- from config.fmpp -->
