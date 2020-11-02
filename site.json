@@ -5,7 +5,7 @@
   "titleSuffix": " — Boilerplate",
   "domain": "example.com",
   "https": true,
-  "googleUA": "",
+  "googleUA": "asdf",
   "socialMedia": [
     {
       "icon": "facebook",
