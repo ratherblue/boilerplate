@@ -38,9 +38,9 @@
 </#macro>
 
 <#macro socialMediaLinks>
-  <ul>
+  <ul class="list-unstyled mb-0 d-flex justify-content-center">
     <#list site.socialMedia as link>
-      <li><a href="${link.url}" rel="nofollow"><i class="fa fa-${link.icon}"></i></a></li>
+      <li class="px-3"><a href="${link.url}" rel="nofollow"><i class="fa fa-${link.icon}"></i></a></li>
     </#list>
   </ul>
 </#macro>

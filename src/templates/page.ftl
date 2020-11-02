@@ -48,18 +48,23 @@
       <title>${title + titleSuffix}</title>
       <@defaultMetaTags />
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
       <#list c.manifest?keys as key>
         <#if key?ends_with(".css")>
           <link rel="stylesheet" type="text/css" href="assets/${c.manifest[key]}">
         </#if>
       </#list>
-      <link rel="shortcut icon" href="img/c-logo.png" type="image/x-icon">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="img/32x32.png" sizes="32x32">
+      <link rel="icon" href="img/48x48.png" sizes="48x48">
+      <link rel="icon" href="img/96x96.png" sizes="96x96">
+      <link rel="icon" href="img/144x144.png" sizes="144x144">
     </head>
     <body<#if bodyClass?has_content> class="${bodyClass}"</#if> itemscope itemtype="${itemtype}">
       <meta itemprop="dateModified" content="${pp.now?iso(site.timezone)}">
       <@header.header />
-      <main class="page-main" role="main">
+      <main class="page-main flex-fill" role="main">
         </#compress><#nested /><#compress>
       </main>
       <#-- footer -->
